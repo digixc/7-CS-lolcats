@@ -75,20 +75,25 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Customising your Virtual Pet
+* Homework Tasks
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Badge It
+** 1. Fixed Loops
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: document
 :END:
 
-[[file:img/Computer_Cat.jpg]]
-- To earn your last badge, you need to customise your pet.
-- The time you have to do this will depend on how quickly you finished the other lessons.
-- Customise your script to make it your own project. You can add anything that you like, but some ideas might be to:
-- Add scripts for PetFitness. Maybe if your Pet doesn't exercise it can grow fatter. Maybe it performs a little animation when you tell it to exercise.
-- Add scripts for PetToilet. Maybe your pet becomes stinky if it doesn't go to the toilet.
-- Add scripts to make your pet misbehave. Maybe it runs about the screen, or starts messing with other sprites. You have to punish your pet to make it behave.
-- The quality and complexity of your customisation will determine which colour badge your teacher awards you.
+[[file:img/hw1a.png
+]]
+file:img/hw1b.png
+
+** 2. Values and Variables
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+file:img/hw2a.png
+file:img/hw2b.png
+file:img/hw2c.png
+file:img/hw2d.png
