@@ -7,7 +7,7 @@
 
 #+BEGIN_HTML
 <div class=ribbon>
-<a href="https://github.com/MarcScott/7-CS-lolcats">Fork me on GitHub</a>
+<a href="https://github.com/stsb11/7-CS-lolcats">Fork me on GitHub</a>
 </div>
 #+END_HTML
 
@@ -88,10 +88,10 @@
 - *A funtion is a /named/ part of a program that performs some /specific task/*
 - In Scratch, /Functions/ are called /Blocks/.
 - Imagine I wanted you to make me a cheese sandwich. I could give you a set of instructions such as:
-  1. Take two pieces of bread.
-  2. Apply butter to one side of each piece
-  3. Place a slice of cheese on the butter side of one piece of bread.
-  4. Place the other slice of bread, butter-side down onto the cheese.
+  - Take two pieces of bread.
+  - Apply butter to one side of each piece
+  - Place a slice of cheese on the butter side of one piece of bread.
+  - Place the other slice of bread, butter-side down onto the cheese.
 - However, it's much easier to just say "Make me a cheese sandwich" as you probably already have the instructions stored in your memory. You have a /named/ instruction for performing the /sandwich making task/ 
 - Functions allow us to write some code, and then run that code just by calling the name of the function.
 ** Code It
