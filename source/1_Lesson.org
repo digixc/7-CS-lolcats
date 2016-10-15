@@ -139,6 +139,10 @@ If you've used Scratch before and already have an account, then you can skip thi
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- You'll upload your completed work to www.BourneToLearncom for marking. The video tutorial below explains how to do it:
+#+BEGIN_HTML
+<iframe width="650" height="393" src="https://www.youtube.com/embed/S0gFlt9_JN4" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
 - *Silver:* Try changing what the cat says and how long it says it for.
 [[file:img/Happeh.png]]
 
