@@ -219,6 +219,6 @@ KillPet
 :HTML_CONTAINER_CLASS: badge
 :END:
 - To get your badge for this section, you're going to need to create a new Scratch file.
-- Create an animation where a character explains the concepts of =Functions=, Variables and Loops to someone who has never heard of the terms. Try to come up with your own examples.
+- Create an animation where a character explains the concepts of =Functions=, =Variables= and =Loops= to someone who has never heard of the terms. Try to come up with your own examples.
 - How clear the explanation is will determine whether you are awarded a Silver, Gold or Platinum badge.
 - You will have only _one_ lesson to work on this, so don't make it too complicated.
