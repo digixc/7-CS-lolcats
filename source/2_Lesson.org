@@ -178,12 +178,13 @@ stop all
 :END:
 
 - The current pet death is a little undramatic.
-- Try to make it a little bit more interesting.
-- Could you add a little bit of animation into it?
-- Could you add some sound effects?
-- Could you have multiple costume changes?
+- Try to make it a little bit more interesting. Things you can add:
+  - Could you add a little bit of animation into it?
+  - Could you add some sound effects?
+  - Could you have multiple costume changes?
 
+- After you have made the death of the cat more dramatic, upload your Scratch code screenshot and take[[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_2/][ this self assessment quiz]]. You will be awarded different badges based on your work.
 
 - *Silver:* You add two (or more) minor changes to the pet death routine.
 - *Gold:* You add two more more major changes (e.g. detailed animations, sound)
-- *Platinum*: You add multiple major changes to make the death scene more elaborate
+- *Platinum*: You add multiple major changes to make the death scene more elaborate. For example, change stage to a grave yard, or add complex animation so that the cat dies gradually with facial changes, sound effects, speech and movement.

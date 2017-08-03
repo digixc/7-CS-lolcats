@@ -143,13 +143,16 @@ If you've used Scratch before and already have an account, then you can skip thi
 #+BEGIN_HTML
 <iframe width="650" height="393" src="https://www.youtube.com/embed/S0gFlt9_JN4" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
-- *Silver:* Try changing what the cat says and how long it says it for.
-[[file:img/Happeh.png]]
+- *Silver:* 
+  - After you have completed the code in Scratch as shown above, try changing what the cat says and how long it says it for.
+  - Follow the video tutorial on how to upload your work and upload your work to www.bournetolearn.com.
+    
+      [[file:img/Happeh.png]]
 
 - *Gold:* Try to change the script so that after the cat has grown, it says "IM SHRINKIN" and then returns to it's regular size.
-   - /HINT:/ You can use negative numbers in Scratch
+  - /HINT:/ You can use negative numbers in Scratch
 
 
-- *Platinum:* Try an experiment with getting the cat to move around.
-- To get your platinum badge you need to make the cat move around in a large circle.
-- You'll probably want to look into using a loop to achieve this.
+- *Platinum:*
+  - To get your platinum badge you need to make the cat move around in a large circle.
+  - You'll probably want to look into using a loop to achieve this.

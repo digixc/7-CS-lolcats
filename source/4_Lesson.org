@@ -87,7 +87,7 @@
 - At the moment, all we have is a script that kills the pet when it's hunger reaches 100.
 - We need a way to feed the pet, so that we can reset it's hunger back to 0
 - To do this, we'll need a new sprite. Either draw or find a picture of some food that is appropriate to feed your pet with.
-- I'm going to use this one.
+- I'm going to use this one. If you also want to use this one, right click on it and choose to *save link as* to save the image to your downloads folder for uploading later.
 [[file:img/fish.png]]
 ** Code It
 :PROPERTIES:
@@ -127,13 +127,27 @@ set PetHunger to 0
 :HTML_CONTAINER_CLASS: badge
 :END:
 In the previous lesson you made variables for =PetTiredness=, =PetThirst= and =PetHappiness=. To get your badge for this lesson you need to complete the following tasks. Complete all three and you'll get a platinum badge.
-- Silver
-[[file:img/Drinking_Cat.jpeg]]
-  1. Find or make an image to represent a drink for your pet. PetThirst should increase gradually increase and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
-- Gold
-[[file:img/Sleepy_Cat.gif]]
-  2. Find or make an image to represent a bed for your pet. PetTiredness should increase gradually and then be reset to 0 when the bed sprite is clicked. If it reaches 100 the pet should die.
-- Platinum
-[[file:img/Needy_Cat.jpg]]
-  3. PetHappiness should start at 100 and gradually decrease until it hits 0, at which point the pet should die. If the pet sprite is clicked (representing stroking the pet), then it's happiness should be reset to 100.
+
+#+BEGIN_HTML
+<img src="./img/silver.png" width=30 height=30 style="display:inline"><strong>Silver</strong>
+#+END_HTML
+  - Find or make an image to represent a drink for your pet. PetThirst should increase gradually increase and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
+  - After you have finished this task, upload a screenshot of your code and [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
+ [[file:img/Drinking_Cat.jpeg]]
+
+#+BEGIN_HTML
+<img src="./img/gold.png" width=30 height=30 style="display:inline"><strong>Gold</strong>
+#+END_HTML
+  
+  - Find or make an image to represent a bed for your pet. PetTiredness should increase gradually and then be reset to 0 when the bed sprite is clicked. If it reaches 100 the pet should die. 
+  - After you have finished this task, upload a screenshot of your code and [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
+ [[file:img/Sleepy_Cat.gif]]
+
+#+BEGIN_HTML
+<img src="./img/platinum.png" width=30 height=30 style="display:inline"><strong>Platinum</strong>
+#+END_HTML
+ 
+  - PetHappiness should start at 100 and gradually decrease until it hits 0, at which point the pet should die. If the pet sprite is clicked (representing stroking the pet), then it's happiness should be reset to 100. 
+  - After you have finished this task, upload a screenshot of your code and [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
+ [[file:img/Needy_Cat.jpg]]
 
