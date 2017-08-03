@@ -95,13 +95,13 @@ At the moment your Virtual Pet is probably a little dull.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: test
 :END:
-** Badge It - Silver
+** Improve It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: code
 :END:
 - Have a friend try your Virtual Pet and give you some feedback.
-- Have them email you their feedback.
-- Write down the changes you will make in response to their feedback.
+- Improve your code based on the feedback you get
+
 * Getting the Pet to talk with an Infinite loop and Conditionals
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -240,5 +240,17 @@ forever
 - To earn your next badge you need to set it all up for Tiredness, Happiness and Thirst.
 - Make sure that you create lists for each of the different variables, so the pet can tell the user what is wrong.
 - Make sure you have at least five elements in each list.
-- You'll receive a Silver, Gold or Platinum badge, depending on how many of the scripts you manage to set up.
-- Take a screenshot of your scripts when you have completed them.
+- You'll receive:
+  - 
+ #+BEGIN_HTML
+<img src="./img/silver.png" width=20 height=20 style="display:inline"><strong>Silver: </strong>You have finished one of the lists with at least five items in it and used it in a loop and a conditional.
+#+END_HTML
+  - 
+ #+BEGIN_HTML
+<img src="./img/gold.png" width=20 height=20 style="display:inline"><strong>Gold: </strong>You have finished two of the lists with at least five items in each and used each in a loop and a conditional.
+#+END_HTML
+  - 
+ #+BEGIN_HTML
+<img src="./img/platinum.png" width=20 height=20 style="display:inline"><strong>Platinum: </strong>You have finished three of the lists with at least five items in each and used each in a loop and a conditional.
+#+END_HTML
+- Take a screenshot of your scripts and upload when you have completed them.
