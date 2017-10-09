@@ -131,7 +131,7 @@ In the previous lesson you made variables for =PetTiredness=, =PetThirst= and =P
 #+BEGIN_HTML
 <img src="./img/silver.png" width=30 height=30 style="display:inline"><strong>Silver</strong>
 #+END_HTML
-  - Find or make an image to represent a drink for your pet. PetThirst should increase gradually increase and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
+  - Find or make an image to represent a drink for your pet. PetThirst should increase gradually and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
   - After you have finished this task, upload a screenshot of your code and [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
  [[file:img/Drinking_Cat.jpeg]]
 
