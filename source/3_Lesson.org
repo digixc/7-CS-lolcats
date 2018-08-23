@@ -209,16 +209,26 @@ KillPet
 - When it reaches 100, the pet should die.
 - If it doesn't work then go back over the instructions, then ask a friend and finally ask your teacher for help.
 - For testing purposes, we've used a wait period of 0.1 secomds. But this isn't really practical for the real Virtual Pet. Change the wait time to something longer. You can choose any value you like.
-* Explaining it all
+* Badge It - Explaining it all
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-
-** Badge It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
 - To get your badge for this section, you're going to need to create a new Scratch file.
 - Create an animation where a character explains the concepts of =Functions=, =Variables= and =Loops= to someone who has never heard of the terms. Try to come up with your own examples.
-- How clear the explanation is will determine whether you are awarded a Silver, Gold or Platinum badge.
-- You will have only _one_ lesson to work on this, so don't make it too complicated.
+
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: silver
+:END:
+- To animation only explains the two of the definitions of *variables*, *functions*, and *loops*.
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: gold
+:END:
+- In addition to above Silver, your animation explains all the three concepts that shows good understanding.
+
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: platinum
+:END:
+- In addition to the above, your animation explains all three concepts in *good English* AND with *relevant examples* clearly showing excellent understanding. 
