@@ -1,16 +1,13 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
-#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
-#+TITLE: A Virtual LOLcat in Scratch
-#+AUTHOR: Marc Scott, X Ellis
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil 
+#+TITLE: End of the unit evaluation
+#+AUTHOR: X Ellis
 
 #+BEGIN_HTML
-<div class=ribbon>
-<a href="https://github.com/digixc/7-CS-lolcats">Fork me on GitHub</a>
-</div>
-
 
 <div id="underlay" onclick="underlayoff()">
 </div>
@@ -26,7 +23,9 @@
 <p onclick="underlayon('hsla(300,100%,25%,0.3)')">Purple</p>
 <p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
 </div>
-
+<div class=ribbon>
+<a href="https://github.com/stsb11/turtle">Fork me on GitHub</a>
+</div>
 #+END_HTML
 
 * COMMENT Use as a template
@@ -93,20 +92,34 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Customising your Virtual Pet
+* My Lol Cat - End of Unit Self Evaluation
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+
+** Instructions for Writting Your Evaluation
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Open new Word document and give your work a title "My Lol cat Self Evaluation"
+- Take a screenshot of your progress ladder graph and the graph below and add them to your new word document
+- Underneath the graphs, make a a sub-heading for each of the strand for this unit. You can find all the avaible strands for this unit in your bournetolearn, My Lol Cat, similar to the example shown below.
+[[./img/unitLearningStrands.png]]
+
+  - Under each heading/learning strand, evaluate the following:
+    - What went well (WWW)
+    - Even better if you ... (EBI)
+    - Reflect your work habit - focus, follow notes and instructions, ask questions when stuck etc
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
-[[file:img/Computer_Cat.jpg]]
-- To earn your last badge, you need to customise your pet.
-- The time you have to do this will depend on how quickly you finished the other lessons.
-- Customise your script to make it your own project. You can add anything that you like, but some ideas might be to:
-- Add scripts for PetFitness. Maybe if your Pet doesn't exercise it can grow fatter. Maybe it performs a little animation when you tell it to exercise.
-- Add scripts for PetToilet. Maybe your pet becomes stinky if it doesn't go to the toilet.
-- Add scripts to make your pet misbehave. Maybe it runs about the screen, or starts messing with other sprites. You have to punish your pet to make it behave.
-- The quality and complexity of your customisation will determine which colour badge your teacher awards you.
+- *Bronze*:  Evaluated all learning strands of this unit but briefly
+- *Silver*: Evaluated all learning strands of this unit with WWW and EBI on all strands
+- *Gold:* Evaluated all learning strands with WWW and EBI on all strands with good English
+- *Platinum:*  All the above, but with realistic self reflection on your own work habit - focus, follow notes and instructions, ask questions when stuck etc
