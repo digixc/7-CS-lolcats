@@ -101,15 +101,13 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Open new Word document and give your work a title "My Lol cat Self Evaluation"
-- Take a screenshot of your progress ladder graph and the graph below and add them to your new word document
-- Underneath the graphs, make a a sub-heading for each of the strand for this unit. You can find all the avaible strands for this unit in your bournetolearn, My Lol Cat, similar to the example shown below.
-[[./img/unitLearningStrands.png]]
-
+- Right click [[./doc/My%20LOL%20Cat%20%E2%80%93%20End%20of%20unit%20Evaluation.docx][this link]] then *Save Link As* to save this evaluation template into your homedrive.
+- Open the downloaded template in Word.
+- Follow the instructions on the template to finish your self evaluation.
   - Under each heading/learning strand, evaluate the following:
     - What went well (WWW)
     - Even better if you ... (EBI)
-    - Reflect your work habit - focus, follow notes and instructions, ask questions when stuck etc
+   
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
