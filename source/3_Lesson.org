@@ -232,6 +232,7 @@ KillPet
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+*** Learning strand: Programming and Development
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: silver
@@ -242,12 +243,18 @@ KillPet
 :HTML_CONTAINER_CLASS: gold
 :END:
 
-- Create a new Scratch file
-- In your new Scratch file, create scriptes where a character explains the concepts of =Functions=, =Variables= and =Loops= to someone who has never heard of the terms. Try to come up with your own examples.
-- For *Gold* badge, your animation explains the two of the definitions of *variables*, *functions*, and *loops*.
+- To show your understanding of the script you have just finished and tested, you need to explain what the script does by adding some comments next to some of the *key blocks*.
+- A *key block* is one of the following:
+  - a loop, such as repeat until, repeat
+  - a variable assignment such as set 
+  - an if statement
+  - a function definition/creation such as the custom block
+  - a function call
+- To comment a key block, right click on the script window and choose *Add Comment*
+- To get this badge, you need to comment at least three key blocks with clear explanations showing good understanding in good English.
 
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: platinum
 :END:
-- In addition to the above *Gold*, your animation explains all three concepts in *good English* AND with *relevant examples* clearly showing excellent understanding. 
+- In addition to the above *Gold*, you have commente all key blocks showing excellent understanding and in good English. 
