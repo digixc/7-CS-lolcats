@@ -4,7 +4,7 @@
 #+HTML_HEAD_EXTRA: <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
 #+TITLE: A Virtual LOLcat in Scratch
-#+AUTHOR: Marc Scott
+#+AUTHOR: Marc Scott and Stephen Fone
 
 #+BEGIN_HTML
 <div class=ribbon>
@@ -114,27 +114,28 @@ Scratch is a programming language that can be used to make small programs and ga
 :END:
 If you've used Scratch before and already have an account, then you can skip this section.
 - Goto [[http://scratch.mit.edu][THIS LINK to the Scratch website]]
-- Click on the =Join Scratch= button in the menu bar.
+- Click on the *Join Scratch button* in the menu bar.
 [[file:img/join.png]]
-- Fill in the details required. Be sure to pick a username and password you will remember.
-- You might need to use your teacher's email address when you register.
-- Once you are logged in, click on the =Create= button in the menu bar.
+[[file:img/SignUp.png]]
+- Fill in the details required. Be sure to pick a *username* and *password* /you will remember/.
+- You may need to use your *personal email address* when you register.
+- Once you are logged in, click on the *Create button* in the menu bar.
 [[file:img/create.png]]
-- Now we can name our file. Call it =Practice Scripts=
+- Now we can name our file. Call it *Practice Scripts.*
 [[file:img/title.png]]
-- Scratch works by dragging blocks of code from the blocks palate into the script area. These blocks then can be stacked to create scripts.
-- Let's make a simple Script. From the Blocks Palate, choose =Events=
+- *Scratch works* by *dragging blocks of code* from the *blocks palate* into the *script area*. These *blocks* then can be *stacked* to *create scripts.*
+- Let's make a simple Script. From the Blocks Palate, choose *Events.*
 [[file:img/Scripts_menu.png]]
-- Now, click and drag the following block on to the Scripts Area.
+- Now, *click and drag* the *following block* on to the *Scripts Area.*
 [[file:img/Green_flag.png]]
-- Next choose the =Looks= scripts from the menu.
-- Click and drag the =say Hello! for 2 secs= block and snap it to the =When flag clicked= block.
+- Next choose the *Looks* scripts from the menu.
+- Click and drag the /say Hello! for 2 secs/ block and snap it to the *When flag clicked* block.
 [[file:img/Hello.png]] 
 ** Run It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-- To run our Scratch script, you just need to click on the =Green Flag= in the Stage area.
+- *To run our Scratch script*, you just need to click on the *Green Flag* in the Stage area.
 [[file:img/Hello2.png]]
 
 ** Code It
@@ -142,32 +143,43 @@ If you've used Scratch before and already have an account, then you can skip thi
 :HTML_CONTAINER_CLASS: code
 :END:
 - Now let's try something a little more complicated.
-- Delete your current script by picking it up and dragging it back to the Blocks Pallette.
+- *Delete your current script* by *dragging* it *back* to the *Blocks Pallette.*
 - We're going to make the cat grow. You'll need to search through the Blocks Pallette to find the appropriate blocks, and build the script as it's shown below.
+- Now click on the *Green Flag* in the Stage area to run your code.
 [[file:img/GROWIN.png]]
-** Run It
+
+** Learn It: Video Tutorial
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: run
+:HTML_CONTAINER_CLASS: learn
 :END:
-- Click on the =Green Flag= in the Stage area.
-** Badge It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- You'll upload your completed work to www.BourneToLearncom for marking. The video tutorial below explains how to do it:
+*Video Tutorial* - You'll upload your completed work to www.BourneToLearncom for marking. The video tutorial below explains how to do it:
 #+BEGIN_HTML
 <iframe width="650" height="393" src="https://www.youtube.com/embed/S0gFlt9_JN4" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
-- *Silver:* 
-  - After you have completed the code in Scratch as shown above, try changing what the cat says and how long it says it for.
-  - Follow the video tutorial on how to upload your work and upload your work to www.bournetolearn.com.
-    
+
+** Badge It: Cat Talk
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+*** Silver - Cat Talk
+- After you have completed the code in Scratch as shown above, try changing what the cat says and how long it says it for.
+- Follow the video tutorial on how to upload your work and upload your work to www.bournetolearn.com.
+
       [[file:img/Happeh.png]]
 
-- *Gold:* Try to change the script so that after the cat has grown, it says "IM SHRINKIN" and then returns to it's regular size.
-  - /HINT:/ You can use negative numbers in Scratch
 
+** Badge It: Cat Shrink!
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+*** Gold - Cat Shrinking
+- Try to change the script so that after the cat has grown, it says "I'm Shrinking!" and then returns to it's regular size.
+- /HINT:/ You can use negative numbers in Scratch
 
-- *Platinum:*
-  - To get your platinum badge you need to make the cat move around in a large circle.
-  - You'll probably want to look into using a loop to achieve this.
+** Badge It: Cat Circles
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+*** Platinum - Cat moving in circles
+- To get your platinum badge, you need to *make the cat move* around in a *large circle.*
+- You'll probably want to look into using a loop to achieve this.
