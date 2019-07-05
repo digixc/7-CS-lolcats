@@ -157,9 +157,15 @@ If you've used Scratch before and already have an account, then you can skip thi
 <iframe width="650" height="393" src="https://www.youtube.com/embed/S0gFlt9_JN4" frameborder="0" allowfullscreen></iframe>
 #+END_HTML
 
+* Badge It - Basic Scripts
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+*** Learning strand: Programming and Development
+
 ** Badge It: Cat Talk
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: silver
 :END:
 *** Silver - Cat Talk
 - After you have completed the code in Scratch as shown above, try changing what the cat says and how long it says it for.
@@ -170,7 +176,7 @@ If you've used Scratch before and already have an account, then you can skip thi
 
 ** Badge It: Cat Shrink!
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: gold
 :END:
 *** Gold - Cat Shrinking
 - Try to change the script so that after the cat has grown, it says "I'm Shrinking!" and then returns to it's regular size.
@@ -178,7 +184,7 @@ If you've used Scratch before and already have an account, then you can skip thi
 
 ** Badge It: Cat Circles
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: platinum
 :END:
 *** Platinum - Cat moving in circles
 - To get your platinum badge, you need to *make the cat move* around in a *large circle.*

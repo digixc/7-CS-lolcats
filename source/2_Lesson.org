@@ -4,7 +4,7 @@
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
 #+TITLE: A Virtual LOLcat in Scratch
-#+AUTHOR: Marc Scott, X Ellis
+#+AUTHOR: Marc Scott, X Ellis, S Fone
 
 #+BEGIN_HTML
 <div class=ribbon>
@@ -101,7 +101,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Virtual pets were very common and popular a few years ago.
-[[file:img/Tamagotchi.jpg]]
+[[file:img/Tamagotchi.png]]
 - Pets such as the [[http:http://en.wikipedia.org/wiki/Tamagotchi][Tamagotchi]] were tiny computers with software on them that simulated a pet.
 - The owner of the pet had to feed it and pet it otherwise the pet would die.
 - You're going to be making your own virtual pet in Scratch.
@@ -110,46 +110,46 @@
 :HTML_CONTAINER_CLASS: research
 :END:
 - Use the web to find out some of the features that were common to most virtual pet games. A list has been started for you below:
-  - Feeding
-  - Petting
-  - Scolding
+  - /Feeding./
+  - /Petting./
+  - /Scolding./
 * Killing our pet
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-[[file:img/Dead_cat.jpg]]
-- Create a new Scratch project called =Virtual_LOL_Cat=
+[[file:img/Dead_cat.png]]
+- *Create a new Scratch project* called *Virtual-LOL-Cat.*
 - No matter how good a gamer you are, your character always dies in the end. So that's the first thing we'll be setting up.
 ** Research It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
 :END:
 - We'll need a couple of images to begin with.
-  - One to represent the living pet.
-  - One to represent the dead pet.
+  - One to represent the *living pet.*
+  - One to represent the *dead pet.*
 
 
 - Here are the ones I'll be using, but you can make your own.
 - If you want to use the dead cat costume below, just right click and save to your downloads folder for uploading later.
 [[file:img/Pet.svg]]
 [[file:img/DeadPet.svg]]
-** Code It
+** Code It: Costume Change
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-Our first script is going to kill the pet, whenever the space bar is pressed. Killing the pet will actually just be a case of changing the sprite's costume.
-   - Click on the Sprite1 costume.
-   - Click on the Costumes tab
-   - Delete the costumes you don't need.
-   - Use the Upload button to add in the costumes for both you alive and dead pet.
+Our first script is going to *kill the pet*, *whenever* the /space bar/ is pressed. Killing the pet will actually just be a case of *changing* the *sprite's costume.*
+- 1. Click on the Costumes Tab.
+- 2. Click on the second Costume.
+- 3. Delete the second costume.
+- 4. Use the Upload button to add in the dead pet costume.
 [[file:img/Costume_1.png]]
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-Now we just need to make sure everything has a sensible name
-1. Name *both* costumes
-2. Name your Sprite
+- Now we just need to make sure everything has a sensible name:
+- 1. Name *both* costumes, *AlivePet* and *DeadPet.*
+- 2. Name your Sprite as: *Pet*
 [[file:img/Costume_2.png]]
 ** Try It
 :PROPERTIES:
@@ -164,20 +164,20 @@ switch to DeadPet
 wait 2 secs
 stop all
 #+END_EXAMPLE
+
 ** Run It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-
-- Run your script.
-- When you hit the space key, the pet should die.
+- Here is an *example* of how your Scracth code should look. Try *running it* and press the *Spacebar* to see if it works properly.
+[[file:img/Cat_Death_Routine1.png]]
 - The problem is that the pet stays dead.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
 - We need a way of resetting the script.
-- Try to code the following.
+- Using the pseudocode below, try to code this in Scratch.
 #+BEGIN_EXAMPLE
     When 'Green Flag' clicked
     Switch to Costume "AlivePet"
@@ -188,22 +188,49 @@ stop all
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-
 - Test your script to make sure it runs.
-- Your pet should die when the space key is pressed, and then reset when you click the green flag
-** Badge It
+- Your pet should die when the space key is pressed, and then reset
+  when you click the green flag.
+
+
+* Badge It - Your Pet Death Routine
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: activity
 :END:
+*** Learning strand: Programming and Development
 
+** Badge It: Pet Animation 1
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: silver
+:END:
+*** Silver - Pet Animation 1
 - The current pet death is a little undramatic.
-- Try to make it a little bit more interesting. Things you can add:
-  - Could you add a little bit of animation into it?
-  - Could you add some sound effects?
-  - Could you have multiple costume changes?
+- Try to make it a little bit more interesting, try *adding two or more minor changes* to the *pet death routine.* *Things you could add:*
+  - /Could you add a little bit of animation into it?/
+  - /Could you add some sound effects?/
+  - /Could you have multiple costume changes?/
+- After you have made the death of the cat more dramatic, *upload your
+  Scratch code screenshot* and *take* [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_2/][this self assessment quiz]].
+- You will be awarded different badges based on your work.
 
-- After you have made the death of the cat more dramatic, upload your Scratch code screenshot and take[[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_2/][ this self assessment quiz]]. You will be awarded different badges based on your work.
 
-- *Silver:* You add two (or more) minor changes to the pet death routine.
-- *Gold:* You add two more more major changes (e.g. detailed animations, sound)
-- *Platinum*: You add multiple major changes to make the death scene more elaborate. For example, change stage to a grave yard, or add complex animation so that the cat dies gradually with facial changes, sound effects, speech and movement.
+** Badge It: Pet Animation 2
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: gold
+:END:
+*** Gold - Pet Animation 2
+- You add two more more major changes (e.g. detailed animations, sound)
+
+** Badge It: Pet Animation 3
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: platinum
+:END:
+*** Platinum - Pet Animation 3
+- To get your platinum badge, you need to *add multiple major changes* to make the death scene more *elaborate.*
+- For example:
+  - /Change the stage to a grave yard./
+  - /Add complex animation so that the cat dies gradually with facial changes./
+  - /Sound effects./
+  - /Speech and movement./
+
+/Upload screenshots of all of your badge tasks to bournetolearn.com/
