@@ -4,7 +4,7 @@
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
 #+TITLE: A Virtual LOLcat in Scratch
-#+AUTHOR: Marc Scott, X Ellis
+#+AUTHOR: Marc Scott, X Ellis, S Fone
 
 #+BEGIN_HTML
 <div class=ribbon>
@@ -93,49 +93,79 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Developing *Programming and Development*, *Algorithms*, *Literacy*, *Information Technology* Learning Strands:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Be able to create and use a new sprite.
+- Be able to use keyboard interrupt events.
+- Be able to use arithmetic operators and loops.
+- Use correct grammar, punctuation and spelling of keywords throughout this project.
+- Use a variety of software to manipulate and present digital content.
 * Feeding the pet
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-[[file:img/Hungry_Cat.jpg]]
+[[file:img/Hungry_Cat_Main.png]]
 ** Research It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
 :END:
-- At the moment, all we have is a script that kills the pet when it's hunger reaches 100.
-- We need a way to feed the pet, so that we can reset it's hunger back to 0
-- To do this, we'll need a new sprite. Either draw or find a picture of some food that is appropriate to feed your pet with.
-- I'm going to use this one. If you also want to use this one, right click on it and choose to *save link as* to save the image to your downloads folder for uploading later.
-[[file:img/fish.png]]
+- At the moment, all we have is a *script that kills the pet* when it's *hunger reaches 100*.
+- *We need a way* to =feed the pet=, so that we can =reset= it's *hunger back to 0.*
+- To do this, we'll need a *new sprite*. You can either *draw one*, use an image form the *Scratch library* or *use the Fish image below*.
+- If you also want to use this one, /right-click/ on it and choose to *save link as* to /save the image/ to your *Year 7\Computer Science\MyLOLCat folder* for uploading later.
+[[file:img/New_Fish.png]]
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- We need to import our image into Scratch next, so that we can use it as a Sprite.
-- In the Sprites panel, click on the upload button and choose your image of the pet food.
-[[file:img/Upload.png]]
-- You might need to edit the size of your Sprite using the Costumes tab, and then position it somewhere sensible on the stage
+- Next we need to *import* our /image into Scratch/, so that we can *use it* as a *Sprite*.
+- In the *Sprites Panel*, click on the *Upload Sprite* button and choose your image of the pet food.
+[[file:img/Upload_Sprite.png]]
+- You might need to *edit the size* of your *Sprite* in the *Sprite Panel*, and then position it somewhere sensible on the stage. See image
+  below:
+[[file:img/Sprite_Size.png]]
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-
 - Now we have a new sprite, we have a new place to add code.
-- Click on your food sprite, and you should see a blank scripts area.
+- *Click on your food sprite*, and you should see a *blank scripts area*.
 - To get back to the scripts you have written previously, you can click on your pet sprite.
-- *The following code goes with the PetFood Sprite /not/ the Pet Sprite*
+- The *following code goes with* the *PetFood Sprite* /not/ the *Pet Sprite*
 #+BEGIN_EXAMPLE
 when this sprite clicked
 set PetHunger to 0
 #+END_EXAMPLE
+- You Scratch code should look something like this:
+[[file:img/PetHunger_Code.png]] 
 ** Run It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-
-- Run your programme.
-- The PetHunger variable should increase, but be reset to 0 whenever the PetFood Sprite is clicked.
+- Test your programme.
+- The *PetHunger variable* should =increase=, but be *reset* to =0=, /whenever the PetFood Sprite is clicked./
 - If it doesn't work then read back over the instructions, ask a friend and finally ask your teacher.
+
+** Code It: Improving our code
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+- To make the game more interesting, wouldn't it be better if when we clicked on the food item, it would =gradually reduced= the *hunger levels* instead of *resetting them to zero*, therefore making the game more challenging.
+- Firstly we need to introduce the idea of using =conditional statements=, like: *if I'm hungry then get something to eat!*
+- Have a look at the following pseudocode and then try to create this using Scratch blocks on your /PetFood Sprite./
+#+BEGIN_EXAMPLE
+when this sprite clicked
+if PetHunger is greater than zero
+then change PetHunger by -2
+wait for 1 second.
+#+END_EXAMPLE
+[[file:img/Hungry_Cats.png]]
 * Tiredness, Happiness and Thirst
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -144,28 +174,32 @@ set PetHunger to 0
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-In the previous lesson you made variables for =PetTiredness=, =PetThirst= and =PetHappiness=. To get your badge for this lesson you need to complete the following tasks. Complete all three and you'll get a platinum badge.
+In the previous lesson you made variables for; =PetHunger=, =PetTiredness=, =PetThirst= and =PetHappiness=. To get your badge for this lesson you need to complete the following tasks. Complete *all three* and you'll get a *platinum badge.*
 
 #+BEGIN_HTML
 <img src="./img/silver.png" width=30 height=30 style="display:inline"><strong>Silver</strong>
 #+END_HTML
   - Find or make an image to represent a drink for your pet. PetThirst should increase gradually and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
-  - After you have finished this task, upload a screenshot of your code and [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
- [[file:img/Drinking_Cat.jpeg]]
+  - After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
+  - Then [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
+ [[file:img/Cat_Drink.png]]
 
 #+BEGIN_HTML
 <img src="./img/gold.png" width=30 height=30 style="display:inline"><strong>Gold</strong>
 #+END_HTML
   
   - Find or make an image to represent a bed for your pet. PetTiredness should increase gradually and then be reset to 0 when the bed sprite is clicked. If it reaches 100 the pet should die. 
-  - After you have finished this task, upload a screenshot of your code and [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
- [[file:img/Sleepy_Cat.gif]]
+  - After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
+  - Then [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
+ [[file:img/Garfield_Tired_Animation.gif]]
 
 #+BEGIN_HTML
 <img src="./img/platinum.png" width=30 height=30 style="display:inline"><strong>Platinum</strong>
 #+END_HTML
  
   - PetHappiness should start at 100 and gradually decrease until it hits 0, at which point the pet should die. If the pet sprite is clicked (representing stroking the pet), then it's happiness should be reset to 100. 
-  - After you have finished this task, upload a screenshot of your code and [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
- [[file:img/Needy_Cat.jpg]]
+  - After you have finished this task, upload a screenshot of your
+    code to Bournetolearn.com.
+  - Then [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
+ [[file:img/Cat_Hugs.png]]
 

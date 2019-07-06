@@ -92,6 +92,22 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Developing *Programming and Development*, *Algorithms*, *Literacy*, *Information Technology* Learning Strands:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Understanding of what a virtual pet is.
+- Understand what a sprite is and how to add new sprites.
+- Understanding of basic keyboard interrupt events.
+- Understanding of arithmetic operators and loops.
+- Understanding of basic display coordinates.
+- Use correct grammar, punctuation and spelling of keywords throughout this project.
+- Use a variety of software to manipulate and present digital content.
+
 * Virtual Pets
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -130,7 +146,7 @@
 
 
 - Here are the ones I'll be using, but you can make your own.
-- If you want to use the dead cat costume below, just right click and save to your downloads folder for uploading later.
+- If you want to *use* the *dead cat costume below*, just /right click/ and /save it/ to your *Year 7\Computer Science\MyLOLCat\* folder for uploading later.
 [[file:img/Pet.svg]]
 [[file:img/DeadPet.svg]]
 ** Code It: Costume Change
@@ -219,7 +235,7 @@ stop all
 :HTML_CONTAINER_CLASS: gold
 :END:
 *** Gold - Pet Animation 2
-- You add two more more major changes (e.g. detailed animations, sound)
+- You add *two more* major changes (/e.g. detailed animations, sound/)
 
 ** Badge It: Pet Animation 3
 :PROPERTIES:

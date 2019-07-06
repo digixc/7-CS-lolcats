@@ -135,6 +135,48 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
 <div id="content">
@@ -143,17 +185,23 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Feeding the pet</a>
+<li><a href="#sec-1">1. Objectives</a>
 <ul>
-<li><a href="#sec-1-1">Research It</a></li>
-<li><a href="#sec-1-2">Code It</a></li>
-<li><a href="#sec-1-3">Code It</a></li>
-<li><a href="#sec-1-4">Run It</a></li>
+<li><a href="#sec-1-1">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2. Tiredness, Happiness and Thirst</a>
+<li><a href="#sec-2">2. Feeding the pet</a>
 <ul>
-<li><a href="#sec-2-1">Badge It</a></li>
+<li><a href="#sec-2-1">Research It</a></li>
+<li><a href="#sec-2-2">Code It</a></li>
+<li><a href="#sec-2-3">Code It</a></li>
+<li><a href="#sec-2-4">Run It</a></li>
+<li><a href="#sec-2-5">Code It: Improving our code</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Tiredness, Happiness and Thirst</a>
+<ul>
+<li><a href="#sec-3-1">Badge It</a></li>
 </ul>
 </li>
 </ul>
@@ -180,110 +228,172 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1"><span class="section-number-2">1</span> Feeding the pet</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Objectives</h2>
 <div class="outline-text-2" id="text-1">
-
-<div class="figure">
-<p><img src="img/Hungry_Cat.jpg" alt="Hungry_Cat.jpg" />
-</p>
 </div>
-</div>
-<div id="outline-container-sec-1-1" class="outline-3 research">
-<h3 id="sec-1-1">Research It</h3>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>At the moment, all we have is a script that kills the pet when it's hunger reaches 100.
+<li>Be able to create and use a new sprite.
 </li>
-<li>We need a way to feed the pet, so that we can reset it's hunger back to 0
+<li>Be able to use keyboard interrupt events.
 </li>
-<li>To do this, we'll need a new sprite. Either draw or find a picture of some food that is appropriate to feed your pet with.
+<li>Be able to use arithmetic operators and loops.
 </li>
-<li>I'm going to use this one. If you also want to use this one, right click on it and choose to <b>save link as</b> to save the image to your downloads folder for uploading later.
+<li>Use correct grammar, punctuation and spelling of keywords throughout this project.
 </li>
-</ul>
-
-<div class="figure">
-<p><img src="img/fish.png" alt="fish.png" />
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-sec-1-2" class="outline-3 code">
-<h3 id="sec-1-2">Code It</h3>
-<div class="outline-text-3" id="text-1-2">
-<ul class="org-ul">
-<li>We need to import our image into Scratch next, so that we can use it as a Sprite.
-</li>
-<li>In the Sprites panel, click on the upload button and choose your image of the pet food.
-</li>
-</ul>
-
-<div class="figure">
-<p><img src="img/Upload.png" alt="Upload.png" />
-</p>
-</div>
-<ul class="org-ul">
-<li>You might need to edit the size of your Sprite using the Costumes tab, and then position it somewhere sensible on the stage
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-sec-1-3" class="outline-3 code">
-<h3 id="sec-1-3">Code It</h3>
-<div class="outline-text-3" id="text-1-3">
-
-<ul class="org-ul">
-<li>Now we have a new sprite, we have a new place to add code.
-</li>
-<li>Click on your food sprite, and you should see a blank scripts area.
-</li>
-<li>To get back to the scripts you have written previously, you can click on your pet sprite.
-</li>
-<li><b>The following code goes with the PetFood Sprite <i>not</i> the Pet Sprite</b>
-</li>
-</ul>
-<pre class="example">
-when this sprite clicked
-set PetHunger to 0
-</pre>
-</div>
-</div>
-<div id="outline-container-sec-1-4" class="outline-3 run">
-<h3 id="sec-1-4">Run It</h3>
-<div class="outline-text-3" id="text-1-4">
-
-<ul class="org-ul">
-<li>Run your programme.
-</li>
-<li>The PetHunger variable should increase, but be reset to 0 whenever the PetFood Sprite is clicked.
-</li>
-<li>If it doesn't work then read back over the instructions, ask a friend and finally ask your teacher.
+<li>Use a variety of software to manipulate and present digital content.
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div id="outline-container-sec-2" class="outline-2 activity">
-<h2 id="sec-2"><span class="section-number-2">2</span> Tiredness, Happiness and Thirst</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Feeding the pet</h2>
 <div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="img/Hungry_Cat_Main.png" alt="Hungry_Cat_Main.png" />
+</p>
 </div>
-<div id="outline-container-sec-2-1" class="outline-3 badge">
-<h3 id="sec-2-1">Badge It</h3>
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 research">
+<h3 id="sec-2-1">Research It</h3>
 <div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>At the moment, all we have is a <b>script that kills the pet</b> when it's <b>hunger reaches 100</b>.
+</li>
+<li><b>We need a way</b> to <code>feed the pet</code>, so that we can <code>reset</code> it's <b>hunger back to 0.</b>
+</li>
+<li>To do this, we'll need a <b>new sprite</b>. You can either <b>draw one</b>, use an image form the <b>Scratch library</b> or <b>use the Fish image below</b>.
+</li>
+<li>If you also want to use this one, <i>right-click</i> on it and choose to <b>save link as</b> to <i>save the image</i> to your <b>Year 7\Computer Science\MyLOLCat folder</b> for uploading later.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/New_Fish.png" alt="New_Fish.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3 code">
+<h3 id="sec-2-2">Code It</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Next we need to <b>import</b> our <i>image into Scratch</i>, so that we can <b>use it</b> as a <b>Sprite</b>.
+</li>
+<li>In the <b>Sprites Panel</b>, click on the <b>Upload Sprite</b> button and choose your image of the pet food.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/Upload_Sprite.png" alt="Upload_Sprite.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>You might need to <b>edit the size</b> of your <b>Sprite</b> in the <b>Sprite Panel</b>, and then position it somewhere sensible on the stage. See image
+below:
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/Sprite_Size.png" alt="Sprite_Size.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3 code">
+<h3 id="sec-2-3">Code It</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Now we have a new sprite, we have a new place to add code.
+</li>
+<li><b>Click on your food sprite</b>, and you should see a <b>blank scripts area</b>.
+</li>
+<li>To get back to the scripts you have written previously, you can click on your pet sprite.
+</li>
+<li>The <b>following code goes with</b> the <b>PetFood Sprite</b> <i>not</i> the <b>Pet Sprite</b>
+</li>
+</ul>
+<pre class="example">
+when this sprite clicked
+set PetHunger to 0
+</pre>
+<ul class="org-ul">
+<li>You Scratch code should look something like this:
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/PetHunger_Code.png" alt="PetHunger_Code.png" /> 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3 run">
+<h3 id="sec-2-4">Run It</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Test your programme.
+</li>
+<li>The <b>PetHunger variable</b> should <code>increase</code>, but be <b>reset</b> to <code>0</code>, <i>whenever the PetFood Sprite is clicked.</i>
+</li>
+<li>If it doesn't work then read back over the instructions, ask a friend and finally ask your teacher.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3 code">
+<h3 id="sec-2-5">Code It: Improving our code</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>To make the game more interesting, wouldn't it be better if when we clicked on the food item, it would <code>gradually reduced</code> the <b>hunger levels</b> instead of <b>resetting them to zero</b>, therefore making the game more challenging.
+</li>
+<li>Firstly we need to introduce the idea of using <code>conditional statements</code>, like: <b>if I'm hungry then get something to eat!</b>
+</li>
+<li>Have a look at the following pseudocode and then try to create this using Scratch blocks on your <i>PetFood Sprite.</i>
+</li>
+</ul>
+<pre class="example">
+when this sprite clicked
+if PetHunger is greater than zero
+then change PetHunger by -2
+wait for 1 second.
+</pre>
+
+<div class="figure">
+<p><img src="img/Hungry_Cats.png" alt="Hungry_Cats.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2 activity">
+<h2 id="sec-3"><span class="section-number-2">3</span> Tiredness, Happiness and Thirst</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3 badge">
+<h3 id="sec-3-1">Badge It</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
-In the previous lesson you made variables for <code>PetTiredness</code>, <code>PetThirst</code> and <code>PetHappiness</code>. To get your badge for this lesson you need to complete the following tasks. Complete all three and you'll get a platinum badge.
+In the previous lesson you made variables for; <code>PetHunger</code>, <code>PetTiredness</code>, <code>PetThirst</code> and <code>PetHappiness</code>. To get your badge for this lesson you need to complete the following tasks. Complete <b>all three</b> and you'll get a <b>platinum badge.</b>
 </p>
 
 <img src="./img/silver.png" width=30 height=30 style="display:inline"><strong>Silver</strong>
 <ul class="org-ul">
 <li>Find or make an image to represent a drink for your pet. PetThirst should increase gradually and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
 </li>
-<li>After you have finished this task, upload a screenshot of your code and <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
+<li>After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
+</li>
+<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
 </li>
 </ul>
 
 <div class="figure">
-<p><img src="img/Drinking_Cat.jpeg" alt="Drinking_Cat.jpeg" />
+<p><img src="img/Cat_Drink.png" alt="Cat_Drink.png" />
 </p>
 </div>
 
@@ -292,12 +402,14 @@ In the previous lesson you made variables for <code>PetTiredness</code>, <code>P
 <ul class="org-ul">
 <li>Find or make an image to represent a bed for your pet. PetTiredness should increase gradually and then be reset to 0 when the bed sprite is clicked. If it reaches 100 the pet should die. 
 </li>
-<li>After you have finished this task, upload a screenshot of your code and <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
+<li>After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
+</li>
+<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
 </li>
 </ul>
 
 <div class="figure">
-<p><img src="img/Sleepy_Cat.gif" alt="Sleepy_Cat.gif" />
+<p><img src="img/Garfield_Tired_Animation.gif" alt="Garfield_Tired_Animation.gif" />
 </p>
 </div>
 
@@ -306,12 +418,15 @@ In the previous lesson you made variables for <code>PetTiredness</code>, <code>P
 <ul class="org-ul">
 <li>PetHappiness should start at 100 and gradually decrease until it hits 0, at which point the pet should die. If the pet sprite is clicked (representing stroking the pet), then it's happiness should be reset to 100. 
 </li>
-<li>After you have finished this task, upload a screenshot of your code and <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
+<li>After you have finished this task, upload a screenshot of your
+code to Bournetolearn.com.
+</li>
+<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
 </li>
 </ul>
 
 <div class="figure">
-<p><img src="img/Needy_Cat.jpg" alt="Needy_Cat.jpg" />
+<p><img src="img/Cat_Hugs.png" alt="Cat_Hugs.png" />
 </p>
 </div>
 </div>
@@ -319,7 +434,7 @@ In the previous lesson you made variables for <code>PetTiredness</code>, <code>P
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"></p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
