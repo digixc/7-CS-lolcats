@@ -4,7 +4,7 @@
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
 #+TITLE: A Virtual LOLcat in Scratch
-#+AUTHOR: Marc Scott, X Ellis
+#+AUTHOR: Marc Scott, X Ellis, S Fone
 
 #+BEGIN_HTML
 <div class=ribbon>
@@ -93,6 +93,21 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* Objectives
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Developing *Programming and Development*, *Algorithms*, *Literacy*, *Information Technology* Learning Strands:
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Develop understanding of structured programming.
+- Be to able to declare and assign variables.
+- Be able to use conditional statements.
+- Be able to use arithmetic operators and loops.
+- Develop an understanding and appropriate use of lists.
+- Use correct grammar, punctuation and spelling of keywords throughout this project.
+- Use a variety of software to manipulate and present digital content.
 * Customising your Virtual Pet
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -133,7 +148,7 @@ At the moment your Virtual Pet is probably a little dull.
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Sometimes in our programmes we want an infinite loop.
-- An infinite loop is one that goes on forever (or until the program is quit).
+- An *infinite loop* is one that goes on *forever* (/or until the program is quit/).
 - We can do this by using a =forever= loop in Scratch.
 - The code in a =forever= loop will run until the program ends.
 ** Learn It
@@ -141,7 +156,7 @@ At the moment your Virtual Pet is probably a little dull.
 :HTML_CONTAINER_CLASS: learn
 :END:
 
-- Conditional statements are very important in programming.
+- *Conditional statements* are very important in programming.
 - Conditional statements are like branches in the program. If a condition is true then one branch is taken, and if the condition is false another branch is taken.
 - For instance, if you want to go to the shops then you might use the following conditional statement to make a decision on how to get there.
 #+BEGIN_EXAMPLE
@@ -156,19 +171,19 @@ else
 :END:
 
 - We'll need a whole new script for this part, so create a new script on the Pet Sprite.
-- Use the following code, and pay attention to the indentation, as this will help you with the nesting of the blocks.
+- Use the following pseudocode, and pay attention to the indentation, as this will help you with the nesting of the blocks.
 #+BEGIN_EXAMPLE
 when green flag clicked
 forever
     if PetHunger > 80 then
         say "I CAN HAZ CHEEZBURGER?" for 2 secs
 #+END_EXAMPLE
-- If you struggle with the code, you can look at an example by [[file:Example_2.html][clicking here]], but have a go on your own first.
+- Your Scratch code should look something like the following:
+[[file:img/Cheeseburger.png]]
 ** Run It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-
 - Run your code and make sure the Pet speaks when it get's too hungry and needs feeding.
 * Adding some more things to say
 :PROPERTIES:
@@ -182,7 +197,6 @@ forever
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
 - A list is a /data structure/.
 - Data structures are a way of storing lots of data.
 - You probably use lists all the time. Your planner probably contains lists of homeworks you have to do each day.
@@ -192,21 +206,24 @@ forever
 :HTML_CONTAINER_CLASS: code
 :END:
 
-1. Click on the =Data= Palatte
-2. Click on =Make a List=
-3. Call the list =HungryTalk=
-4. Click =OK=
+- 1. Make sure that you have your virtual pet selected.
+- 2. Click on the =Code= Palatte.
+- 3. Click on =Variables=.
+- 4. Then click on =Make a List=.
+- 5. Name the list =HungryTalk=
+- 6. Click =OK=
 [[file:img/HungryTalk.png]]
-You should now see a list on the Stage.
+You should now see an empty list on the Stage.
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-
-1. Click on the =+= symbol
-2. You can now add things for the Pet to say when it is hungry
-3. Add at least five things for the Pet to say, to tell the user that it is hungry.
-4. If you want to use LOLSPEAK, then[[http://speaklolcat.com][ this website might help you translate.]]
+- 1. Click on the =+= symbol
+- 2. You can now add things for the Pet to say when it is hungry
+- 3. Add at least *five things* for the Pet to say, to tell the user that it is hungry.
+- 4. If you want to use LOLSPEAK, then[[http://speaklolcat.com][ this website might help you translate.]]
+- *Here is an example of things you could get your pet to ask for:*
+[[file:img/HungryTalk_List.png]]
 * Choosing from the list randomly
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -215,36 +232,35 @@ You should now see a list on the Stage.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
-- We want to use a random number generator to choose what the Pet is going to say.
+- We want to use a *random number generator* to *choose* /what the Pet is going to say./
 - Randomness and computers don't really work. Computers are really just a bunch of tiny switches and a data store, and making switches turn off and on randomly is something that is really tricky.
-- We tend to call random numbers generated by a computer *pseudo-random*. This means /pretend/ random. The numbers might appear to be random to humans, but in reality they have been chosen by the computer based on some form of input (often using the inbuilt clock that all computers have).
+- We tend to call random numbers generated by a computer *pseudo-random*. This means /pretend/ random. The numbers might appear to be random to humans, but in reality they have been chosen by the computer based on some form of input (/often using the inbuilt clock that all computers have/).
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-
 - We're now going to change our script a little to use a random number to speak from the list.
-- Change this script;
+- Change this pseudocode script:
 #+BEGIN_EXAMPLE
 when green flag clicked
 forever
     if PetHunger > 80 then
         say "I CAN HAZ CHEEZBURGER?" for 2 secs
 #+END_EXAMPLE
--So it looks like this
+- So it looks like this pseudocode:
 #+BEGIN_EXAMPLE
 when green flag clicked
 forever
     if PetHunger > 80 then
         say (item (pick random 1 to (length of HungryTalk)) of HungryTalk) for 2 secs
 #+END_EXAMPLE
-- I've used brackets to indicate the nesting of blocks, but if you get stuck then you can see an [[file:Example_3.html][example here]].
+- We've used brackets to indicate the *nesting of blocks*, but if you get stuck then you can look at the example below.
+- *Here is an example of how your Scratch blocks should look:*
+[[file:img/HungryTalk_List_Code.png]]
 ** Run It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-
 
 - Run your code and make sure that it works; picking a random element from your list each time.
 * Doing it again and again and again
@@ -255,20 +271,27 @@ forever
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- To earn your next badge you need to set it all up for Tiredness, Happiness and Thirst.
-- Make sure that you create lists for each of the different variables, so the pet can tell the user what is wrong.
-- Make sure you have at least five elements in each list.
+- To earn your next badge you need to set it all up for =Tiredness, Happiness= and =Thirst.=
+- *Make sure* that you *create lists* for /each of the different variables/, so the pet can tell the user what is wrong.
+- *Make sure* you have at =least five elements= *in each list.*
 - You'll receive:
-  - 
- #+BEGIN_HTML
-<img src="./img/silver.png" width=20 height=20 style="display:inline"><strong>Silver: </strong>You have finished one of the lists with at least five items in it and used it in a loop and a conditional.
-#+END_HTML
-  - 
- #+BEGIN_HTML
-<img src="./img/gold.png" width=20 height=20 style="display:inline"><strong>Gold: </strong>You have finished two of the lists with at least five items in each and used each in a loop and a conditional.
-#+END_HTML
-  - 
- #+BEGIN_HTML
-<img src="./img/platinum.png" width=20 height=20 style="display:inline"><strong>Platinum: </strong>You have finished three of the lists with at least five items in each and used each in a loop and a conditional.
-#+END_HTML
-- Take a screenshot of your scripts and upload when you have completed them.
+
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: silver
+:END:
+- You have *finished one* of the /lists/ with at *least five items* in it and used it in a /loop and a conditional./
+
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: gold
+:END:
+- You have *finished two* of the /lists/ with at *least five items* in each and used each in a /loop and a conditional./
+
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: platinum
+:END:
+- You have *finished three* of the /lists/ with at *least five items* in each and used each in a /loop and a conditional./ 
+
+ /Upload screenshots of all of your badge tasks to bournetolearn.com/

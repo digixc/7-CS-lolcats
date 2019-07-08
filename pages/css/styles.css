@@ -258,6 +258,9 @@ video {
 .save h3 {
   background-image: url(icons/Save.svg);
 }
+.objectives h3 {
+  background-image: url(icons/objectives.png);
+}
 h3 {
   color: #A30000;
   background-position: 0px 10px;
