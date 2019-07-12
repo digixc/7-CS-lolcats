@@ -116,7 +116,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
+*** Learning strand: Programming and Development, Information Technology and algorithms
 [[file:img/Customised_Pet.png]]
 - To earn your last badge, you need to customise your pet.
 - The time you have to do this will depend on how quickly you finished the other lessons.

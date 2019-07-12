@@ -177,7 +177,7 @@ If you've used Scratch before and already have an account, then you can skip thi
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-*** Learning strand: Programming and Development
+*** Learning strand: Programming and Development and algorithms
 
 ** Badge It: Cat Talk
 :PROPERTIES:

@@ -213,7 +213,7 @@ stop all
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-*** Learning strand: Programming and Development
+*** Learning strand: Programming and Development and algorithms
 
 ** Badge It: Pet Animation 1
 :PROPERTIES:
