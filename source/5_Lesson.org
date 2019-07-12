@@ -267,6 +267,7 @@ forever
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+*** Learning strand: Programming and Development, information technology and algorithms
 ** Badge It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge

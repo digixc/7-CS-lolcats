@@ -261,7 +261,7 @@ KillPet
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-*** Learning strand: Programming and Development
+*** Learning strand: Programming and Development, algorithms and literacy
 
 ** Badge It - Silver
 :PROPERTIES:
