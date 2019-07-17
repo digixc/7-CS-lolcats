@@ -3,21 +3,28 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Virtual LOLcat in Scratch</title>
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
+<meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -44,27 +51,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -84,6 +175,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -94,7 +186,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -135,48 +227,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
-<script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
         displayAlign: "center",
-        displayIndent: "2em",
+        displayIndent: "0em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
              }
-        }
-    });
-/*]]>*///-->
+});
 </script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -185,48 +257,48 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Objectives</a>
+<li><a href="#org884b321">1. Objectives</a>
 <ul>
-<li><a href="#sec-1-1">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</a></li>
+<li><a href="#orga4429ca">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2. Virtual Pets</a>
+<li><a href="#orgcd48dbe">2. Virtual Pets</a>
 <ul>
-<li><a href="#sec-2-1">Learn It</a></li>
-<li><a href="#sec-2-2">Research It</a></li>
+<li><a href="#org0d07019">Learn It</a></li>
+<li><a href="#org6d68853">Research It</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Killing our pet</a>
+<li><a href="#org13931b1">3. Killing our pet</a>
 <ul>
-<li><a href="#sec-3-1">Research It</a></li>
-<li><a href="#sec-3-2">Code It: Costume Change</a></li>
-<li><a href="#sec-3-3">Code It</a></li>
-<li><a href="#sec-3-4">Try It</a></li>
-<li><a href="#sec-3-5">Run It</a></li>
-<li><a href="#sec-3-6">Try It</a></li>
-<li><a href="#sec-3-7">Run It</a></li>
+<li><a href="#org7c7178f">Research It</a></li>
+<li><a href="#orge2aef71">Code It: Costume Change</a></li>
+<li><a href="#org8b378d4">Code It</a></li>
+<li><a href="#org2bacb51">Try It</a></li>
+<li><a href="#orgdcc0216">Run It</a></li>
+<li><a href="#org78619dd">Try It</a></li>
+<li><a href="#orgdad84d8">Run It</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4. Badge It - Your Pet Death Routine</a>
+<li><a href="#org3acfdea">4. Badge It - Your Pet Death Routine</a>
 <ul>
 <li>
 <ul>
-<li><a href="#sec-4-0-1">Learning strand: Programming and Development and algorithms</a></li>
+<li><a href="#orgb30f753">Learning strand: Programming and Development and algorithms</a></li>
 </ul>
 </li>
-<li><a href="#sec-4-1">Badge It: Pet Animation 1</a>
+<li><a href="#orgdf92f54">Badge It: Pet Animation 1</a>
 <ul>
-<li><a href="#sec-4-1-1">Silver - Pet Animation 1</a></li>
+<li><a href="#org78bb336">Silver - Pet Animation 1</a></li>
 </ul>
 </li>
-<li><a href="#sec-4-2">Badge It: Pet Animation 2</a>
+<li><a href="#orgae0d588">Badge It: Pet Animation 2</a>
 <ul>
-<li><a href="#sec-4-2-1">Gold - Pet Animation 2</a></li>
+<li><a href="#org828d19d">Gold - Pet Animation 2</a></li>
 </ul>
 </li>
-<li><a href="#sec-4-3">Badge It: Pet Animation 3</a>
+<li><a href="#orge10d7fb">Badge It: Pet Animation 3</a>
 <ul>
-<li><a href="#sec-4-3-1">Platinum - Pet Animation 3</a></li>
+<li><a href="#org0d86864">Platinum - Pet Animation 3</a></li>
 </ul>
 </li>
 </ul>
@@ -235,9 +307,21 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <div class=ribbon>
-<a href="https://github.com/stsb11/7-CS-lolcats">Fork me on GitHub</a>
+<a href="https://github.com/digixc/7-CS-lolcats">Fork me on GitHub</a>
 </div>
 
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></>
+      <li><a href="evaluation.html">Evaluation</a></li>
+
+    </ul>
+  </div>
 
 <div id="underlay" onclick="underlayoff()">
 </div>
@@ -254,43 +338,36 @@ for the JavaScript code in this tag.
 <p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1"><span class="section-number-2">1</span> Objectives</h2>
+
+<div id="outline-container-org884b321" class="outline-2 objectives">
+<h2 id="org884b321"><span class="section-number-2">1</span> Objectives</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-sec-1-1" class="outline-3 learn">
-<h3 id="sec-1-1">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orga4429ca" class="outline-3 learn">
+<h3 id="orga4429ca">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</h3>
+<div class="outline-text-3" id="text-orga4429ca">
 <ul class="org-ul">
-<li>Understanding of what a virtual pet is.
-</li>
-<li>Understand what a sprite is and how to add new sprites.
-</li>
-<li>Understanding of basic keyboard interrupt events.
-</li>
-<li>Understanding of arithmetic operators and loops.
-</li>
-<li>Understanding of basic display coordinates.
-</li>
-<li>Use correct grammar, punctuation and spelling of keywords throughout this project.
-</li>
-<li>Use a variety of software to manipulate and present digital content.
-</li>
+<li>Understanding of what a virtual pet is.</li>
+<li>Understand what a sprite is and how to add new sprites.</li>
+<li>Understanding of basic keyboard interrupt events.</li>
+<li>Understanding of arithmetic operators and loops.</li>
+<li>Understanding of basic display coordinates.</li>
+<li>Use correct grammar, punctuation and spelling of keywords throughout this project.</li>
+<li>Use a variety of software to manipulate and present digital content.</li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2 activity">
-<h2 id="sec-2"><span class="section-number-2">2</span> Virtual Pets</h2>
+<div id="outline-container-orgcd48dbe" class="outline-2 activity">
+<h2 id="orgcd48dbe"><span class="section-number-2">2</span> Virtual Pets</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-sec-2-1" class="outline-3 learn">
-<h3 id="sec-2-1">Learn It</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org0d07019" class="outline-3 learn">
+<h3 id="org0d07019">Learn It</h3>
+<div class="outline-text-3" id="text-org0d07019">
 <ul class="org-ul">
-<li>Virtual pets were very common and popular a few years ago.
-</li>
+<li>Virtual pets were very common and popular a few years ago.</li>
 </ul>
 
 <div class="figure">
@@ -298,35 +375,28 @@ for the JavaScript code in this tag.
 </p>
 </div>
 <ul class="org-ul">
-<li>Pets such as the <a href="http:http://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a> were tiny computers with software on them that simulated a pet.
-</li>
-<li>The owner of the pet had to feed it and pet it otherwise the pet would die.
-</li>
-<li>You're going to be making your own virtual pet in Scratch.
-</li>
+<li>Pets such as the <a href="http:http://en.wikipedia.org/wiki/Tamagotchi">Tamagotchi</a> were tiny computers with software on them that simulated a pet.</li>
+<li>The owner of the pet had to feed it and pet it otherwise the pet would die.</li>
+<li>You're going to be making your own virtual pet in Scratch.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-2-2" class="outline-3 research">
-<h3 id="sec-2-2">Research It</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-org6d68853" class="outline-3 research">
+<h3 id="org6d68853">Research It</h3>
+<div class="outline-text-3" id="text-org6d68853">
 <ul class="org-ul">
 <li>Use the web to find out some of the features that were common to most virtual pet games. A list has been started for you below:
 <ul class="org-ul">
-<li><i>Feeding.</i>
-</li>
-<li><i>Petting.</i>
-</li>
-<li><i>Scolding.</i>
-</li>
-</ul>
-</li>
+<li><i>Feeding.</i></li>
+<li><i>Petting.</i></li>
+<li><i>Scolding.</i></li>
+</ul></li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-3" class="outline-2 activity">
-<h2 id="sec-3"><span class="section-number-2">3</span> Killing our pet</h2>
+<div id="outline-container-org13931b1" class="outline-2 activity">
+<h2 id="org13931b1"><span class="section-number-2">3</span> Killing our pet</h2>
 <div class="outline-text-2" id="text-3">
 
 <div class="figure">
@@ -334,54 +404,45 @@ for the JavaScript code in this tag.
 </p>
 </div>
 <ul class="org-ul">
-<li><b>Create a new Scratch project</b> called <b>Virtual-LOL-Cat.</b>
-</li>
-<li>No matter how good a gamer you are, your character always dies in the end. So that's the first thing we'll be setting up.
-</li>
+<li><b>Create a new Scratch project</b> called <b>Virtual-LOL-Cat.</b></li>
+<li>No matter how good a gamer you are, your character always dies in the end. So that's the first thing we'll be setting up.</li>
 </ul>
 </div>
-<div id="outline-container-sec-3-1" class="outline-3 research">
-<h3 id="sec-3-1">Research It</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org7c7178f" class="outline-3 research">
+<h3 id="org7c7178f">Research It</h3>
+<div class="outline-text-3" id="text-org7c7178f">
 <ul class="org-ul">
 <li>We'll need a couple of images to begin with.
 <ul class="org-ul">
-<li>One to represent the <b>living pet.</b>
-</li>
-<li>One to represent the <b>dead pet.</b>
-</li>
-</ul>
-</li>
+<li>One to represent the <b>living pet.</b></li>
+<li>One to represent the <b>dead pet.</b></li>
+</ul></li>
 </ul>
 
 
 <ul class="org-ul">
-<li>Here are the ones I'll be using, but you can make your own.
-</li>
-<li>If you want to <b>use</b> the <b>dead cat costume below</b>, just <i>right click</i> and <i>save it</i> to your <b>Year 7\Computer Science\MyLOLCat\</b> folder for uploading later.
-</li>
+<li>Here are the ones I'll be using, but you can make your own.</li>
+<li>If you want to <b>use</b> the <b>dead cat costume below</b>, just <i>right click</i> and <i>save it</i> to your <b>Year 7\Computer Science\MyLOLCat\</b> folder for uploading later.</li>
 </ul>
 <p>
-<img src="img/Pet.svg" alt="Pet.svg" />
-<img src="img/DeadPet.svg" alt="DeadPet.svg" />
+<object type="image/svg+xml" data="img/Pet.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+<object type="image/svg+xml" data="img/DeadPet.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
 </p>
 </div>
 </div>
-<div id="outline-container-sec-3-2" class="outline-3 code">
-<h3 id="sec-3-2">Code It: Costume Change</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-orge2aef71" class="outline-3 code">
+<h3 id="orge2aef71">Code It: Costume Change</h3>
+<div class="outline-text-3" id="text-orge2aef71">
 <p>
 Our first script is going to <b>kill the pet</b>, <b>whenever</b> the <i>space bar</i> is pressed. Killing the pet will actually just be a case of <b>changing</b> the <b>sprite's costume.</b>
 </p>
 <ul class="org-ul">
-<li>1. Click on the Costumes Tab.
-</li>
-<li>2. Click on the second Costume.
-</li>
-<li>3. Delete the second costume.
-</li>
-<li>4. Use the Upload button to add in the dead pet costume.
-</li>
+<li>1. Click on the Costumes Tab.</li>
+<li>2. Click on the second Costume.</li>
+<li>3. Delete the second costume.</li>
+<li>4. Use the Upload button to add in the dead pet costume.</li>
 </ul>
 
 <div class="figure">
@@ -390,16 +451,13 @@ Our first script is going to <b>kill the pet</b>, <b>whenever</b> the <i>space b
 </div>
 </div>
 </div>
-<div id="outline-container-sec-3-3" class="outline-3 code">
-<h3 id="sec-3-3">Code It</h3>
-<div class="outline-text-3" id="text-3-3">
+<div id="outline-container-org8b378d4" class="outline-3 code">
+<h3 id="org8b378d4">Code It</h3>
+<div class="outline-text-3" id="text-org8b378d4">
 <ul class="org-ul">
-<li>Now we just need to make sure everything has a sensible name:
-</li>
-<li>1. Name <b>both</b> costumes, <b>AlivePet</b> and <b>DeadPet.</b>
-</li>
-<li>2. Name your Sprite as: <b>Pet</b>
-</li>
+<li>Now we just need to make sure everything has a sensible name:</li>
+<li>1. Name <b>both</b> costumes, <b>AlivePet</b> and <b>DeadPet.</b></li>
+<li>2. Name your Sprite as: <b>Pet</b></li>
 </ul>
 
 <div class="figure">
@@ -408,9 +466,9 @@ Our first script is going to <b>kill the pet</b>, <b>whenever</b> the <i>space b
 </div>
 </div>
 </div>
-<div id="outline-container-sec-3-4" class="outline-3 try">
-<h3 id="sec-3-4">Try It</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-org2bacb51" class="outline-3 try">
+<h3 id="org2bacb51">Try It</h3>
+<div class="outline-text-3" id="text-org2bacb51">
 <p>
 We now need to write a little script to kill the pet.
 Look at the code below and see if you can assemble the script.
@@ -425,12 +483,11 @@ stop all
 </div>
 </div>
 
-<div id="outline-container-sec-3-5" class="outline-3 run">
-<h3 id="sec-3-5">Run It</h3>
-<div class="outline-text-3" id="text-3-5">
+<div id="outline-container-orgdcc0216" class="outline-3 run">
+<h3 id="orgdcc0216">Run It</h3>
+<div class="outline-text-3" id="text-orgdcc0216">
 <ul class="org-ul">
-<li>Here is an <b>example</b> of how your Scracth code should look. Try <b>running it</b> and press the <b>Spacebar</b> to see if it works properly.
-</li>
+<li>Here is an <b>example</b> of how your Scracth code should look. Try <b>running it</b> and press the <b>Spacebar</b> to see if it works properly.</li>
 </ul>
 
 <div class="figure">
@@ -438,122 +495,102 @@ stop all
 </p>
 </div>
 <ul class="org-ul">
-<li>The problem is that the pet stays dead.
-</li>
+<li>The problem is that the pet stays dead.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-6" class="outline-3 try">
-<h3 id="sec-3-6">Try It</h3>
-<div class="outline-text-3" id="text-3-6">
+<div id="outline-container-org78619dd" class="outline-3 try">
+<h3 id="org78619dd">Try It</h3>
+<div class="outline-text-3" id="text-org78619dd">
 <ul class="org-ul">
-<li>We need a way of resetting the script.
-</li>
-<li>Using the pseudocode below, try to code this in Scratch.
-</li>
+<li>We need a way of resetting the script.</li>
+<li>Using the pseudocode below, try to code this in Scratch.</li>
 </ul>
 <pre class="example">
 When 'Green Flag' clicked
 Switch to Costume "AlivePet"
-Goto position x:0 y:-125
+Goto position x:0 y:-125               
 </pre>
 <ul class="org-ul">
-<li>You might need to adjust the <code>y:</code> coordinate, depending on the size of the sprite you are using.
-</li>
+<li>You might need to adjust the <code>y:</code> coordinate, depending on the size of the sprite you are using.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-7" class="outline-3 run">
-<h3 id="sec-3-7">Run It</h3>
-<div class="outline-text-3" id="text-3-7">
+<div id="outline-container-orgdad84d8" class="outline-3 run">
+<h3 id="orgdad84d8">Run It</h3>
+<div class="outline-text-3" id="text-orgdad84d8">
 <ul class="org-ul">
-<li>Test your script to make sure it runs.
-</li>
+<li>Test your script to make sure it runs.</li>
 <li>Your pet should die when the space key is pressed, and then reset
-when you click the green flag.
-</li>
+when you click the green flag.</li>
 </ul>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-sec-4" class="outline-2 activity">
-<h2 id="sec-4"><span class="section-number-2">4</span> Badge It - Your Pet Death Routine</h2>
+<div id="outline-container-org3acfdea" class="outline-2 activity">
+<h2 id="org3acfdea"><span class="section-number-2">4</span> Badge It - Your Pet Death Routine</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-sec-4-0-1" class="outline-4">
-<h4 id="sec-4-0-1">Learning strand: Programming and Development and algorithms</h4>
+<div id="outline-container-orgb30f753" class="outline-4">
+<h4 id="orgb30f753">Learning strand: Programming and Development and algorithms</h4>
 </div>
 
-<div id="outline-container-sec-4-1" class="outline-3 silver">
-<h3 id="sec-4-1">Badge It: Pet Animation 1</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-orgdf92f54" class="outline-3 silver">
+<h3 id="orgdf92f54">Badge It: Pet Animation 1</h3>
+<div class="outline-text-3" id="text-orgdf92f54">
 </div>
-<div id="outline-container-sec-4-1-1" class="outline-4">
-<h4 id="sec-4-1-1">Silver - Pet Animation 1</h4>
-<div class="outline-text-4" id="text-4-1-1">
+<div id="outline-container-org78bb336" class="outline-4">
+<h4 id="org78bb336">Silver - Pet Animation 1</h4>
+<div class="outline-text-4" id="text-org78bb336">
 <ul class="org-ul">
-<li>The current pet death is a little undramatic.
-</li>
+<li>The current pet death is a little undramatic.</li>
 <li>Try to make it a little bit more interesting, try <b>adding two or more minor changes</b> to the <b>pet death routine.</b> <b>Things you could add:</b>
 <ul class="org-ul">
-<li><i>Could you add a little bit of animation into it?</i>
-</li>
-<li><i>Could you add some sound effects?</i>
-</li>
-<li><i>Could you have multiple costume changes?</i>
-</li>
-</ul>
-</li>
+<li><i>Could you add a little bit of animation into it?</i></li>
+<li><i>Could you add some sound effects?</i></li>
+<li><i>Could you have multiple costume changes?</i></li>
+</ul></li>
 <li>After you have made the death of the cat more dramatic, <b>upload your
-Scratch code screenshot</b> and <b>take</b> <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_2/">this self assessment quiz</a>.
-</li>
-<li>You will be awarded different badges based on your work.
-</li>
+Scratch code screenshot</b> and <b>take</b> <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_2/">this self assessment quiz</a>.</li>
+<li>You will be awarded different badges based on your work.</li>
 </ul>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-sec-4-2" class="outline-3 gold">
-<h3 id="sec-4-2">Badge It: Pet Animation 2</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-orgae0d588" class="outline-3 gold">
+<h3 id="orgae0d588">Badge It: Pet Animation 2</h3>
+<div class="outline-text-3" id="text-orgae0d588">
 </div>
-<div id="outline-container-sec-4-2-1" class="outline-4">
-<h4 id="sec-4-2-1">Gold - Pet Animation 2</h4>
-<div class="outline-text-4" id="text-4-2-1">
+<div id="outline-container-org828d19d" class="outline-4">
+<h4 id="org828d19d">Gold - Pet Animation 2</h4>
+<div class="outline-text-4" id="text-org828d19d">
 <ul class="org-ul">
-<li>You add <b>two more</b> major changes (<i>e.g. detailed animations, sound</i>)
-</li>
+<li>You add <b>two more</b> major changes (<i>e.g. detailed animations, sound</i>)</li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-4-3" class="outline-3 platinum">
-<h3 id="sec-4-3">Badge It: Pet Animation 3</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-orge10d7fb" class="outline-3 platinum">
+<h3 id="orge10d7fb">Badge It: Pet Animation 3</h3>
+<div class="outline-text-3" id="text-orge10d7fb">
 </div>
-<div id="outline-container-sec-4-3-1" class="outline-4">
-<h4 id="sec-4-3-1">Platinum - Pet Animation 3</h4>
-<div class="outline-text-4" id="text-4-3-1">
+<div id="outline-container-org0d86864" class="outline-4">
+<h4 id="org0d86864">Platinum - Pet Animation 3</h4>
+<div class="outline-text-4" id="text-org0d86864">
 <ul class="org-ul">
-<li>To get your platinum badge, you need to <b>add multiple major changes</b> to make the death scene more <b>elaborate.</b>
-</li>
+<li>To get your platinum badge, you need to <b>add multiple major changes</b> to make the death scene more <b>elaborate.</b></li>
 <li>For example:
 <ul class="org-ul">
-<li><i>Change the stage to a grave yard.</i>
-</li>
-<li><i>Add complex animation so that the cat dies gradually with facial changes.</i>
-</li>
-<li><i>Sound effects.</i>
-</li>
-<li><i>Speech and movement.</i>
-</li>
-</ul>
-</li>
+<li><i>Change the stage to a grave yard.</i></li>
+<li><i>Add complex animation so that the cat dies gradually with facial changes.</i></li>
+<li><i>Sound effects.</i></li>
+<li><i>Speech and movement.</i></li>
+</ul></li>
 </ul>
 
 <p>
@@ -565,7 +602,7 @@ Scratch code screenshot</b> and <b>take</b> <a href="https://www.bournetolearn.c
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="validation"></p>
 </div>
 </body>
 </html>

@@ -6,12 +6,24 @@
 #+TITLE: A Virtual LOLcat in Scratch
 #+AUTHOR: Marc Scott, X Ellis, S Fone
 
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
+
 <div class=ribbon>
 <a href="https://github.com/digixc/7-CS-lolcats">Fork me on GitHub</a>
 </div>
 
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></>
+      <li><a href="evaluation.html">Evaluation</a></li>
 
+    </ul>
+  </div>
 <div id="underlay" onclick="underlayoff()">
 </div>
 <div id="overlay" onclick="overlayoff()">
@@ -27,7 +39,7 @@
 <p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
 </div>
 
-#+END_HTML
+#+END_EXPORT
 
 * COMMENT Use as a template
 :PROPERTIES:
@@ -95,7 +107,7 @@
 
 * Objectives
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
+:HTML_CONTAINER_CLASS: objectives
 :END:
 ** Developing *Programming and Development*, *Algorithms*, *Literacy*, *Information Technology* Learning Strands:
 :PROPERTIES:
@@ -170,35 +182,36 @@ wait for 1 second.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Badge It
+
+- In the previous lesson you made variables for; =PetHunger=, =PetTiredness=, =PetThirst= and =PetHappiness=. To get your badge for this lesson you need to complete the following tasks. Complete *all three* and you'll get a *platinum badge.*
+** Badge It - Silver
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
+:HTML_CONTAINER_CLASS: silver
 :END:
 *** Learning strand: Programming and Development and algorithms
 
-In the previous lesson you made variables for; =PetHunger=, =PetTiredness=, =PetThirst= and =PetHappiness=. To get your badge for this lesson you need to complete the following tasks. Complete *all three* and you'll get a *platinum badge.*
-
-#+BEGIN_HTML
-<img src="./img/silver.png" width=30 height=30 style="display:inline"><strong>Silver</strong>
-#+END_HTML
   - Find or make an image to represent a drink for your pet. PetThirst should increase gradually and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
   - After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
   - Then [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
  [[file:img/Cat_Drink.png]]
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: gold
+:END:
 
-#+BEGIN_HTML
-<img src="./img/gold.png" width=30 height=30 style="display:inline"><strong>Gold</strong>
-#+END_HTML
-  
+*** Learning strand: Programming and Development and algorithms
+
   - Find or make an image to represent a bed for your pet. PetTiredness should increase gradually and then be reset to 0 when the bed sprite is clicked. If it reaches 100 the pet should die. 
   - After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
   - Then [[https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/][click here]] to get your badge.
  [[file:img/Garfield_Tired_Animation.gif]]
 
-#+BEGIN_HTML
-<img src="./img/platinum.png" width=30 height=30 style="display:inline"><strong>Platinum</strong>
-#+END_HTML
- 
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: platinum
+:END:
+*** Learning strand: Programming and Development and algorithms
+
   - PetHappiness should start at 100 and gradually decrease until it hits 0, at which point the pet should die. If the pet sprite is clicked (representing stroking the pet), then it's happiness should be reset to 100. 
   - After you have finished this task, upload a screenshot of your
     code to Bournetolearn.com.

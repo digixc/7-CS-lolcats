@@ -3,21 +3,28 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Virtual LOLcat in Scratch</title>
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
+<meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -44,27 +51,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -84,6 +175,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="css/styles.css"/>
@@ -94,7 +186,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -135,48 +227,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
-<script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
         displayAlign: "center",
-        displayIndent: "2em",
+        displayIndent: "0em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
              }
-        }
-    });
-/*]]>*///-->
+});
 </script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -185,25 +257,35 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Objectives</a>
+<li><a href="#orgb65ccac">1. Objectives</a>
 <ul>
-<li><a href="#sec-1-1">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</a></li>
+<li><a href="#org7b24c4f">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2. Feeding the pet</a>
+<li><a href="#orgb742a87">2. Feeding the pet</a>
 <ul>
-<li><a href="#sec-2-1">Research It</a></li>
-<li><a href="#sec-2-2">Code It</a></li>
-<li><a href="#sec-2-3">Code It</a></li>
-<li><a href="#sec-2-4">Run It</a></li>
-<li><a href="#sec-2-5">Code It: Improving our code</a></li>
+<li><a href="#org9b10c24">Research It</a></li>
+<li><a href="#orgb3e12ad">Code It</a></li>
+<li><a href="#org00124bf">Code It</a></li>
+<li><a href="#orga68f741">Run It</a></li>
+<li><a href="#orge050e2d">Code It: Improving our code</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Tiredness, Happiness and Thirst</a>
+<li><a href="#org0002c8a">3. Tiredness, Happiness and Thirst</a>
 <ul>
-<li><a href="#sec-3-1">Badge It</a>
+<li><a href="#org66b9e82">Badge It - Silver</a>
 <ul>
-<li><a href="#sec-3-1-1">Learning strand: Programming and Development and algorithms</a></li>
+<li><a href="#org0bd67ec">Learning strand: Programming and Development and algorithms</a></li>
+</ul>
+</li>
+<li><a href="#org383ec03">Badge It - Gold</a>
+<ul>
+<li><a href="#org7eb71c2">Learning strand: Programming and Development and algorithms</a></li>
+</ul>
+</li>
+<li><a href="#org0d06127">Badge It - Platinum</a>
+<ul>
+<li><a href="#orgd720dce">Learning strand: Programming and Development and algorithms</a></li>
 </ul>
 </li>
 </ul>
@@ -211,11 +293,23 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
+
 <div class=ribbon>
 <a href="https://github.com/digixc/7-CS-lolcats">Fork me on GitHub</a>
 </div>
 
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+      <li><a href="5_Lesson.html">Week5</a></li>
+      <li><a href="6_Lesson.html">Week6</a></>
+      <li><a href="evaluation.html">Evaluation</a></li>
 
+    </ul>
+  </div>
 <div id="underlay" onclick="underlayoff()">
 </div>
 <div id="overlay" onclick="overlayoff()">
@@ -231,30 +325,25 @@ for the JavaScript code in this tag.
 <p onclick="underlayon('hsla(60,100%,50%,0.3)')">Yellow</p>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2 activity">
-<h2 id="sec-1"><span class="section-number-2">1</span> Objectives</h2>
+<div id="outline-container-orgb65ccac" class="outline-2 objectives">
+<h2 id="orgb65ccac"><span class="section-number-2">1</span> Objectives</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-sec-1-1" class="outline-3 learn">
-<h3 id="sec-1-1">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org7b24c4f" class="outline-3 learn">
+<h3 id="org7b24c4f">Developing <b>Programming and Development</b>, <b>Algorithms</b>, <b>Literacy</b>, <b>Information Technology</b> Learning Strands:</h3>
+<div class="outline-text-3" id="text-org7b24c4f">
 <ul class="org-ul">
-<li>Be able to create and use a new sprite.
-</li>
-<li>Be able to use keyboard interrupt events.
-</li>
-<li>Be able to use arithmetic operators and loops.
-</li>
-<li>Use correct grammar, punctuation and spelling of keywords throughout this project.
-</li>
-<li>Use a variety of software to manipulate and present digital content.
-</li>
+<li>Be able to create and use a new sprite.</li>
+<li>Be able to use keyboard interrupt events.</li>
+<li>Be able to use arithmetic operators and loops.</li>
+<li>Use correct grammar, punctuation and spelling of keywords throughout this project.</li>
+<li>Use a variety of software to manipulate and present digital content.</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-2" class="outline-2 activity">
-<h2 id="sec-2"><span class="section-number-2">2</span> Feeding the pet</h2>
+<div id="outline-container-orgb742a87" class="outline-2 activity">
+<h2 id="orgb742a87"><span class="section-number-2">2</span> Feeding the pet</h2>
 <div class="outline-text-2" id="text-2">
 
 <div class="figure">
@@ -262,18 +351,14 @@ for the JavaScript code in this tag.
 </p>
 </div>
 </div>
-<div id="outline-container-sec-2-1" class="outline-3 research">
-<h3 id="sec-2-1">Research It</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org9b10c24" class="outline-3 research">
+<h3 id="org9b10c24">Research It</h3>
+<div class="outline-text-3" id="text-org9b10c24">
 <ul class="org-ul">
-<li>At the moment, all we have is a <b>script that kills the pet</b> when it's <b>hunger reaches 100</b>.
-</li>
-<li><b>We need a way</b> to <code>feed the pet</code>, so that we can <code>reset</code> it's <b>hunger back to 0.</b>
-</li>
-<li>To do this, we'll need a <b>new sprite</b>. You can either <b>draw one</b>, use an image form the <b>Scratch library</b> or <b>use the Fish image below</b>.
-</li>
-<li>If you also want to use this one, <i>right-click</i> on it and choose to <b>save link as</b> to <i>save the image</i> to your <b>Year 7\Computer Science\MyLOLCat folder</b> for uploading later.
-</li>
+<li>At the moment, all we have is a <b>script that kills the pet</b> when it's <b>hunger reaches 100</b>.</li>
+<li><b>We need a way</b> to <code>feed the pet</code>, so that we can <code>reset</code> it's <b>hunger back to 0.</b></li>
+<li>To do this, we'll need a <b>new sprite</b>. You can either <b>draw one</b>, use an image form the <b>Scratch library</b> or <b>use the Fish image below</b>.</li>
+<li>If you also want to use this one, <i>right-click</i> on it and choose to <b>save link as</b> to <i>save the image</i> to your <b>Year 7\Computer Science\MyLOLCat folder</b> for uploading later.</li>
 </ul>
 
 <div class="figure">
@@ -282,14 +367,12 @@ for the JavaScript code in this tag.
 </div>
 </div>
 </div>
-<div id="outline-container-sec-2-2" class="outline-3 code">
-<h3 id="sec-2-2">Code It</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-orgb3e12ad" class="outline-3 code">
+<h3 id="orgb3e12ad">Code It</h3>
+<div class="outline-text-3" id="text-orgb3e12ad">
 <ul class="org-ul">
-<li>Next we need to <b>import</b> our <i>image into Scratch</i>, so that we can <b>use it</b> as a <b>Sprite</b>.
-</li>
-<li>In the <b>Sprites Panel</b>, click on the <b>Upload Sprite</b> button and choose your image of the pet food.
-</li>
+<li>Next we need to <b>import</b> our <i>image into Scratch</i>, so that we can <b>use it</b> as a <b>Sprite</b>.</li>
+<li>In the <b>Sprites Panel</b>, click on the <b>Upload Sprite</b> button and choose your image of the pet food.</li>
 </ul>
 
 <div class="figure">
@@ -298,8 +381,7 @@ for the JavaScript code in this tag.
 </div>
 <ul class="org-ul">
 <li>You might need to <b>edit the size</b> of your <b>Sprite</b> in the <b>Sprite Panel</b>, and then position it somewhere sensible on the stage. See image
-below:
-</li>
+below:</li>
 </ul>
 
 <div class="figure">
@@ -308,26 +390,21 @@ below:
 </div>
 </div>
 </div>
-<div id="outline-container-sec-2-3" class="outline-3 code">
-<h3 id="sec-2-3">Code It</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-org00124bf" class="outline-3 code">
+<h3 id="org00124bf">Code It</h3>
+<div class="outline-text-3" id="text-org00124bf">
 <ul class="org-ul">
-<li>Now we have a new sprite, we have a new place to add code.
-</li>
-<li><b>Click on your food sprite</b>, and you should see a <b>blank scripts area</b>.
-</li>
-<li>To get back to the scripts you have written previously, you can click on your pet sprite.
-</li>
-<li>The <b>following code goes with</b> the <b>PetFood Sprite</b> <i>not</i> the <b>Pet Sprite</b>
-</li>
+<li>Now we have a new sprite, we have a new place to add code.</li>
+<li><b>Click on your food sprite</b>, and you should see a <b>blank scripts area</b>.</li>
+<li>To get back to the scripts you have written previously, you can click on your pet sprite.</li>
+<li>The <b>following code goes with</b> the <b>PetFood Sprite</b> <i>not</i> the <b>Pet Sprite</b></li>
 </ul>
 <pre class="example">
 when this sprite clicked
 set PetHunger to 0
 </pre>
 <ul class="org-ul">
-<li>You Scratch code should look something like this:
-</li>
+<li>You Scratch code should look something like this:</li>
 </ul>
 
 <div class="figure">
@@ -336,30 +413,24 @@ set PetHunger to 0
 </div>
 </div>
 </div>
-<div id="outline-container-sec-2-4" class="outline-3 run">
-<h3 id="sec-2-4">Run It</h3>
-<div class="outline-text-3" id="text-2-4">
+<div id="outline-container-orga68f741" class="outline-3 run">
+<h3 id="orga68f741">Run It</h3>
+<div class="outline-text-3" id="text-orga68f741">
 <ul class="org-ul">
-<li>Test your programme.
-</li>
-<li>The <b>PetHunger variable</b> should <code>increase</code>, but be <b>reset</b> to <code>0</code>, <i>whenever the PetFood Sprite is clicked.</i>
-</li>
-<li>If it doesn't work then read back over the instructions, ask a friend and finally ask your teacher.
-</li>
+<li>Test your programme.</li>
+<li>The <b>PetHunger variable</b> should <code>increase</code>, but be <b>reset</b> to <code>0</code>, <i>whenever the PetFood Sprite is clicked.</i></li>
+<li>If it doesn't work then read back over the instructions, ask a friend and finally ask your teacher.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-2-5" class="outline-3 code">
-<h3 id="sec-2-5">Code It: Improving our code</h3>
-<div class="outline-text-3" id="text-2-5">
+<div id="outline-container-orge050e2d" class="outline-3 code">
+<h3 id="orge050e2d">Code It: Improving our code</h3>
+<div class="outline-text-3" id="text-orge050e2d">
 <ul class="org-ul">
-<li>To make the game more interesting, wouldn't it be better if when we clicked on the food item, it would <code>gradually reduced</code> the <b>hunger levels</b> instead of <b>resetting them to zero</b>, therefore making the game more challenging.
-</li>
-<li>Firstly we need to introduce the idea of using <code>conditional statements</code>, like: <b>if I'm hungry then get something to eat!</b>
-</li>
-<li>Have a look at the following pseudocode and then try to create this using Scratch blocks on your <i>PetFood Sprite.</i>
-</li>
+<li>To make the game more interesting, wouldn't it be better if when we clicked on the food item, it would <code>gradually reduced</code> the <b>hunger levels</b> instead of <b>resetting them to zero</b>, therefore making the game more challenging.</li>
+<li>Firstly we need to introduce the idea of using <code>conditional statements</code>, like: <b>if I'm hungry then get something to eat!</b></li>
+<li>Have a look at the following pseudocode and then try to create this using Scratch blocks on your <i>PetFood Sprite.</i></li>
 </ul>
 <pre class="example">
 when this sprite clicked
@@ -375,62 +446,67 @@ wait for 1 second.
 </div>
 </div>
 </div>
-<div id="outline-container-sec-3" class="outline-2 activity">
-<h2 id="sec-3"><span class="section-number-2">3</span> Tiredness, Happiness and Thirst</h2>
+<div id="outline-container-org0002c8a" class="outline-2 activity">
+<h2 id="org0002c8a"><span class="section-number-2">3</span> Tiredness, Happiness and Thirst</h2>
 <div class="outline-text-2" id="text-3">
-</div>
-<div id="outline-container-sec-3-1" class="outline-3 badge">
-<h3 id="sec-3-1">Badge It</h3>
-<div class="outline-text-3" id="text-3-1">
-</div>
-<div id="outline-container-sec-3-1-1" class="outline-4">
-<h4 id="sec-3-1-1">Learning strand: Programming and Development and algorithms</h4>
-<div class="outline-text-4" id="text-3-1-1">
-<p>
-In the previous lesson you made variables for; <code>PetHunger</code>, <code>PetTiredness</code>, <code>PetThirst</code> and <code>PetHappiness</code>. To get your badge for this lesson you need to complete the following tasks. Complete <b>all three</b> and you'll get a <b>platinum badge.</b>
-</p>
-
-<img src="./img/silver.png" width=30 height=30 style="display:inline"><strong>Silver</strong>
 <ul class="org-ul">
-<li>Find or make an image to represent a drink for your pet. PetThirst should increase gradually and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.
-</li>
-<li>After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
-</li>
-<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
-</li>
+<li>In the previous lesson you made variables for; <code>PetHunger</code>, <code>PetTiredness</code>, <code>PetThirst</code> and <code>PetHappiness</code>. To get your badge for this lesson you need to complete the following tasks. Complete <b>all three</b> and you'll get a <b>platinum badge.</b></li>
+</ul>
+</div>
+<div id="outline-container-org66b9e82" class="outline-3 silver">
+<h3 id="org66b9e82">Badge It - Silver</h3>
+<div class="outline-text-3" id="text-org66b9e82">
+</div>
+<div id="outline-container-org0bd67ec" class="outline-4">
+<h4 id="org0bd67ec">Learning strand: Programming and Development and algorithms</h4>
+<div class="outline-text-4" id="text-org0bd67ec">
+<ul class="org-ul">
+<li>Find or make an image to represent a drink for your pet. PetThirst should increase gradually and then be reset to 0 when the drink sprite is clicked. If it reaches 100, the pet should die.</li>
+<li>After you have finished this task, upload a screenshot of your code to Bournetolearn.com.</li>
+<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.</li>
 </ul>
 
 <div class="figure">
 <p><img src="img/Cat_Drink.png" alt="Cat_Drink.png" />
 </p>
 </div>
+</div>
+</div>
+</div>
+<div id="outline-container-org383ec03" class="outline-3 gold">
+<h3 id="org383ec03">Badge It - Gold</h3>
+<div class="outline-text-3" id="text-org383ec03">
+</div>
 
-<img src="./img/gold.png" width=30 height=30 style="display:inline"><strong>Gold</strong>
-
+<div id="outline-container-org7eb71c2" class="outline-4">
+<h4 id="org7eb71c2">Learning strand: Programming and Development and algorithms</h4>
+<div class="outline-text-4" id="text-org7eb71c2">
 <ul class="org-ul">
-<li>Find or make an image to represent a bed for your pet. PetTiredness should increase gradually and then be reset to 0 when the bed sprite is clicked. If it reaches 100 the pet should die. 
-</li>
-<li>After you have finished this task, upload a screenshot of your code to Bournetolearn.com.
-</li>
-<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
-</li>
+<li>Find or make an image to represent a bed for your pet. PetTiredness should increase gradually and then be reset to 0 when the bed sprite is clicked. If it reaches 100 the pet should die.</li>
+<li>After you have finished this task, upload a screenshot of your code to Bournetolearn.com.</li>
+<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.</li>
 </ul>
 
 <div class="figure">
 <p><img src="img/Garfield_Tired_Animation.gif" alt="Garfield_Tired_Animation.gif" />
 </p>
 </div>
+</div>
+</div>
+</div>
 
-<img src="./img/platinum.png" width=30 height=30 style="display:inline"><strong>Platinum</strong>
-
+<div id="outline-container-org0d06127" class="outline-3 platinum">
+<h3 id="org0d06127">Badge It - Platinum</h3>
+<div class="outline-text-3" id="text-org0d06127">
+</div>
+<div id="outline-container-orgd720dce" class="outline-4">
+<h4 id="orgd720dce">Learning strand: Programming and Development and algorithms</h4>
+<div class="outline-text-4" id="text-orgd720dce">
 <ul class="org-ul">
-<li>PetHappiness should start at 100 and gradually decrease until it hits 0, at which point the pet should die. If the pet sprite is clicked (representing stroking the pet), then it's happiness should be reset to 100. 
-</li>
+<li>PetHappiness should start at 100 and gradually decrease until it hits 0, at which point the pet should die. If the pet sprite is clicked (representing stroking the pet), then it's happiness should be reset to 100.</li>
 <li>After you have finished this task, upload a screenshot of your
-code to Bournetolearn.com.
-</li>
-<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.
-</li>
+code to Bournetolearn.com.</li>
+<li>Then <a href="https://www.bournetolearn.com/quizzes/y7-lolCat/Lesson_4/">click here</a> to get your badge.</li>
 </ul>
 
 <div class="figure">
@@ -443,7 +519,7 @@ code to Bournetolearn.com.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="validation"></p>
 </div>
 </body>
 </html>
