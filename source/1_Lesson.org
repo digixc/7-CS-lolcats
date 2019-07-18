@@ -178,14 +178,14 @@ If you've used Scratch before and already have an account, then you can skip thi
 - Now click on the *Green Flag* in the Stage area to run your code.
 [[file:img/GROWIN.png]]
 
-** Learn It: Video Tutorial
+** Learn It: Uploading Your Work Video Tutorial
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
 *Video Tutorial* - You'll upload your completed work to www.BourneToLearncom for marking. The video tutorial below explains how to do it:
-#+BEGIN_HTML
+#+BEGIN_EXPORT html
 <iframe width="650" height="393" src="https://www.youtube.com/embed/S0gFlt9_JN4" frameborder="0" allowfullscreen></iframe>
-#+END_HTML
+#+END_EXPORT
 
 * Badge It - Basic Scripts
 :PROPERTIES:
@@ -193,29 +193,29 @@ If you've used Scratch before and already have an account, then you can skip thi
 :END:
 *** Learning strand: Programming and Development and algorithms
 
-** Badge It: Cat Talk
+** Badge It: Silver - Cat Talk
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: silver
 :END:
-*** Silver - Cat Talk
+
 - After you have completed the code in Scratch as shown above, try changing what the cat says and how long it says it for.
 - Follow the video tutorial on how to upload your work and upload your work to www.bournetolearn.com.
 
       [[file:img/Happeh.png]]
 
 
-** Badge It: Cat Shrink!
+** Badge It: Gold - Cat Shrink!
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: gold
 :END:
-*** Gold - Cat Shrinking
+
 - Try to change the script so that after the cat has grown, it says "I'm Shrinking!" and then returns to it's regular size.
 - /HINT:/ You can use negative numbers in Scratch
 
-** Badge It: Cat Circles
+** Badge It: Platinum - Cat moving in circles Cat Circles
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: platinum
 :END:
-*** Platinum - Cat moving in circles
+
 - To get your platinum badge, you need to *make the cat move* around in a *large circle.*
 - You'll probably want to look into using a loop to achieve this.
