@@ -212,7 +212,7 @@ If you've used Scratch before and already have an account, then you can skip thi
 - Try to change the script so that after the cat has grown, it says "I'm Shrinking!" and then returns to it's regular size.
 - /HINT:/ You can use negative numbers in Scratch
 
-** Badge It: Platinum - Cat moving in circles Cat Circles
+** Badge It: Platinum - Cat moving in circles
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: platinum
 :END:
